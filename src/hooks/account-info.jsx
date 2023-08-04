@@ -9,7 +9,7 @@ const useAccountInfo = () => {
     useEffect(() => {
         const fetchAccountInfo = async () => {
             try {
-                const response = await httpClient.get(``)
+                const response = await httpClient.get(`account?${queryString}`)
             } catch (error) {
                 console.error('Error fetching account info:', error);
             }
