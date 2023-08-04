@@ -9,14 +9,17 @@ const useAccountInfo = () => {
     useEffect(() => {
         const fetchAccountInfo = async () => {
             try {
-                const response = await httpClient.get(`account?${queryString}`)
+                const response = await httpClient.get(`account?${queryString}`);
+                setAccountInfo(response.data);
             } catch (error) {
                 console.error('Error fetching account info:', error);
             }
-        }
+        };
 
+        fetchAccountInfo();
+    }, []);
 
-    })
+    return accountInfo
 
 
 }
