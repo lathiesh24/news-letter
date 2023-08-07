@@ -10,7 +10,13 @@ function App() {
 
   return (
     <div className="App">
-      <Newsletter />
+      <Newsletter
+        isSubmitting={false}
+        isSubmitError={false}
+        isSubmitSuccess={false}
+        handleSubscribe={handleSubscribe}
+        totalIssues={0}
+        totalSubscribers={0} />
     </div>
   );
 }

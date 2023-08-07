@@ -10,7 +10,8 @@ const useAccountInfo = () => {
         const fetchAccountInfo = async () => {
             try {
                 const response = await httpClient.get(`account?${queryString}`);
-                setAccountInfo(response.data);
+                setAccountInfo(response);
+                console.log("Responseeeeeeeeee------>>>>>>", response);
             } catch (error) {
                 console.error('Error fetching account info:', error);
             }
